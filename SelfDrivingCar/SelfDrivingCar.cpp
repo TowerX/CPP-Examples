@@ -15,12 +15,25 @@ int main()
 	string traffic = "";
 	string turnSignal = "";
 
-	cout << "Is the traffic light red, yellow or green?" <<endl;
-	cin > lightColor;
+	cout << "Is the traffic light red, yellow or green?" << endl;
+	cin >> lightColor;
 	
 	if (lightColor != "green") {
 		cout << "The light is: " << lightColor << " , do not turn!" << endl;
 	}
+	else {
+		cout << "The light is green! Is there any oncoming traffic - yes or no?" << endl;
+		cin >> traffic;
+
+		if (traffic === "no" || traffic === "No") {
+			cout << "Yay! There is no traffic! You can cross now." << endl;
+		}
+		else {
+			cout << "Woops! There is traffic and you should not cross right now." << endl;
+		}
+	}
+
+
 	return 0;
 }
 
