@@ -25,7 +25,7 @@ int main()
 		cout << "The light is green! Is there any oncoming traffic - yes or no?" << endl;
 		cin >> traffic;
 
-		if (traffic === "no" || traffic === "No") {
+		if (traffic != "yes") {
 			cout << "Yay! There is no traffic! You can cross now." << endl;
 		}
 		else {
