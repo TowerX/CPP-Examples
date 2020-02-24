@@ -29,11 +29,13 @@ int main()
 		// If there is traffic, display a message of not good to cross.
 		if (traffic != "yes") {
 			cout << "Yay! There is no traffic! You can turn now." << endl;
+			// You can turn. The car will turn off the signal.
 			turnSignal = "off";
 			cout << "Turn Signal Status: " << turnSignal << endl;
 		}
 		else {
 			cout << "Woops! There is traffic and you should not turn right now." << endl;
+			// You can't turn. The car will keep the left turn signal.
 			turnSignal = "left";
 			cout << "Turn Signal Status: " << turnSignal << endl;
 		}
