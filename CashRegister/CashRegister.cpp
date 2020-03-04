@@ -38,6 +38,11 @@ int main()
 	// Output design
 	cout << "Item Cost \t\t Item Tax \t\t Item Subtotal" << endl;
 	cout << "--------------------------------------------------------------" << endl;
+	
+	// Loop through the values
+	for (int i = 0; i < 5; i++) {
+		cout << itemAmount[i] << "\t\t\t\t" << itemTax[i] << "\t\t\t\t" << itemSubtotal[i]<<endl;
+	}
 
 	return 0;
 }
