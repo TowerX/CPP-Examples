@@ -19,14 +19,25 @@ int main()
 	float taxTotal = 0;
 	float totalDue = 0;
 
-	// Calculation loop
+
 	// Set decimals to display (2)
 	cout.precision(2);
 	cout.setf(ios::fixed);
 
+	// Calculation loop
 	for (int i = 0; i < 5; i++) {
+		cout << "Please enter the item amount one at a time: ";
+		cin >> itemAmount[i];
 
+		// Calculate tax
+		itemTax[i] = (itemAmount[i] * taxRate) / 100;
+		// Calculate item subtotal
+		itemSubtotal[i] = itemAmount[i] + itemTax[i];
 	}
+
+	// Output design
+	cout << "Item Cost \t\t Item Tax \t\t Item Subtotal" << endl;
+	cout << "--------------------------------------------------------------" << endl;
 
 	return 0;
 }
