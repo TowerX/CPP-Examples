@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SelfDrivingCar", "SelfDrivi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CashRegister", "CashRegister\CashRegister.vcxproj", "{45DA580F-DBFD-4BA6-8296-95A0B094CFF3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleContactManager", "SimpleContactManager\SimpleContactManager.vcxproj", "{D89810EF-D7A8-45CE-B9C5-733A702F9C73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{45DA580F-DBFD-4BA6-8296-95A0B094CFF3}.Release|x64.Build.0 = Release|x64
 		{45DA580F-DBFD-4BA6-8296-95A0B094CFF3}.Release|x86.ActiveCfg = Release|Win32
 		{45DA580F-DBFD-4BA6-8296-95A0B094CFF3}.Release|x86.Build.0 = Release|Win32
+		{D89810EF-D7A8-45CE-B9C5-733A702F9C73}.Debug|x64.ActiveCfg = Debug|x64
+		{D89810EF-D7A8-45CE-B9C5-733A702F9C73}.Debug|x64.Build.0 = Debug|x64
+		{D89810EF-D7A8-45CE-B9C5-733A702F9C73}.Debug|x86.ActiveCfg = Debug|Win32
+		{D89810EF-D7A8-45CE-B9C5-733A702F9C73}.Debug|x86.Build.0 = Debug|Win32
+		{D89810EF-D7A8-45CE-B9C5-733A702F9C73}.Release|x64.ActiveCfg = Release|x64
+		{D89810EF-D7A8-45CE-B9C5-733A702F9C73}.Release|x64.Build.0 = Release|x64
+		{D89810EF-D7A8-45CE-B9C5-733A702F9C73}.Release|x86.ActiveCfg = Release|Win32
+		{D89810EF-D7A8-45CE-B9C5-733A702F9C73}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

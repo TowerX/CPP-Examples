@@ -1,5 +1,9 @@
-// CashRegister.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*
+Author: Jay Torres
+Date: March 4, 2020
+Purpose: Cash Register App - Calculate totals with tax.
+FileName: CashRegister.cpp
+*/
 
 #include <iostream>
 using namespace std;
@@ -31,8 +35,14 @@ int main()
 
 		// Calculate tax
 		itemTax[i] = (itemAmount[i] * taxRate) / 100;
-		// Calculate item subtotal
+		// Calculate item subTotal
 		itemSubtotal[i] = itemAmount[i] + itemTax[i];
+		// Calculate itemTotal
+		itemTotal = itemTotal + itemAmount[i];
+		// Calculate taxTotal
+		taxTotal = taxTotal + itemTax[i];
+		// Calculate totalDue
+		totalDue = totalDue + itemSubtotal[i];
 	}
 
 	// Output design
@@ -41,8 +51,13 @@ int main()
 	
 	// Loop through the values
 	for (int i = 0; i < 5; i++) {
-		cout << itemAmount[i] << "\t\t\t" << itemTax[i] << "\t\t\t" << itemSubtotal[i]<<endl;
+		// Display the values to the console
+		cout << itemAmount[i] << "\t\t\t" << itemTax[i] << "\t\t\t\t" << itemSubtotal[i] << endl;
 	}
+	// Display totals to the console
+	cout << "--------------------------------------------------------------" << endl;
+	cout << "Items Total \t\t Tax Total \t\t Total Due" << endl;
+	cout << itemTotal << "\t\t\t" << taxTotal << "\t\t\t\t" << totalDue << endl;
 
 	return 0;
 }
