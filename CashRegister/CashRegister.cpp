@@ -41,7 +41,7 @@ int main()
 	
 	// Loop through the values
 	for (int i = 0; i < 5; i++) {
-		cout << itemAmount[i] << "\t\t\t\t" << itemTax[i] << "\t\t\t\t" << itemSubtotal[i]<<endl;
+		cout << itemAmount[i] << "\t\t\t" << itemTax[i] << "\t\t\t" << itemSubtotal[i]<<endl;
 	}
 
 	return 0;
