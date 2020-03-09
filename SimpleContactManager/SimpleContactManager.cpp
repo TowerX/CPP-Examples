@@ -6,20 +6,19 @@ FileName: SimpleContactManager.cpp
 */
 
 #include <iostream>
+#include <cstdlib>
+#include <iomanip>
+
 using namespace std;
 
 int main()
 {
-	// Declare name and phone array variables with a size of variable SIZE in this case, 10
-	const int SIZE = 10;
+	// Declare name and phone array variables with a size of constant variable SIZE in this case, 3
+	const int SIZE = 3;
 	string name[SIZE];
 	string phone[SIZE];
-
-
-
-
-
-
+	
+	return 0;
 }
 
 
