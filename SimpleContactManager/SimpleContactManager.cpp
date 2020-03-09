@@ -15,8 +15,19 @@ int main()
 {
 	// Declare name and phone array variables with a size of constant variable SIZE in this case, 3
 	const int SIZE = 3;
-	string name[SIZE];
-	string phone[SIZE];
+	string name[SIZE] = { "" };
+	string phone[SIZE] = { "" };
+	
+	// Fill the array with data
+	cout << "Please enter 3 contact names and phone numbers" << endl;
+	cout << "--------------------------------------------------------------" << endl;
+
+	for (int i = 0; i < SIZE; i++) {
+		cout << "Enter the contact name:" << endl;
+		cin >> name[i];
+		cout << "Enter the phone number for:" << name[i] << endl;
+		cin >> phone[i];
+	}
 	
 	return 0;
 }
