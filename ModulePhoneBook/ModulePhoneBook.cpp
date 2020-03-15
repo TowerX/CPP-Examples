@@ -13,19 +13,27 @@ FileName: ModulePhoneBook.cpp
 
 using namespace std;
 
-string name[3];
-string phoneNumber[3];
 const int SIZE = 3;
+string name[SIZE] = { "" };
+string phoneNumber[SIZE] = { "" };
+string searchInput;
+
 
 void inputData() {
 	// Get input from the user
 	for (int i = 0; i < SIZE; i++) {
-		cout << "\nEnter the " << i + 1 << " person name: ";
-		getline(cin, name[i]);
+		// Header information
+		cout << "Please enter 3 contact names and phone numbers" << endl;
+		cout << "--------------------------------------------------------------" << endl;
+		// Fill the array with data
+		for (int i = 0; i < SIZE; i++) {
+			cout << "Enter the contact name:" << endl;
+			getline(cin, name[i]);
 
-		cout << "\nEnter the " << i + 1 << " person phone number: ";
-		cin >> phoneNumber[i];
-		cin.ignore();
+			cout << "Enter the phone number for:" << name[i] << endl;
+			cin >> phoneNumber[i];
+			cin.ignore();
+		}
 	}
 }
 
