@@ -18,7 +18,7 @@ int main()
 	string name[SIZE] = { "" };
 	string phone[SIZE] = { "" };
 	string searchInput;
-	
+
 	// Header information
 	cout << "Please enter 3 contact names and phone numbers" << endl;
 	cout << "--------------------------------------------------------------" << endl;
@@ -46,7 +46,7 @@ int main()
 	for (int i = 0; i < SIZE; i++) {
 		cout << setw(2) << i + 1 << "." << "Name: " << setw(20) << name[i] << " | " << "Number: " << setw(15) << phone[i] << endl;
 	}
-	
+
 	// Get user input and store the value on searchInput variable.
 	cout << "Enter a name to search" << endl;
 	cout << "--------------------------------------------------------------" << endl;
@@ -67,7 +67,7 @@ int main()
 		}
 	}
 
-	
+
 	return 0;
 }
 
