@@ -17,6 +17,7 @@ const int SIZE = 3;
 string name[SIZE] = { "" };
 string phoneNumber[SIZE] = { "" };
 string searchInput;
+int sortOrder = 0;
 
 
 void inputData() {
@@ -37,12 +38,58 @@ void inputData() {
 	}
 }
 
+void searchData() {
+	// Get user input and store the value on searchInput variable.
+	cout << "Enter a name to search" << endl;
+	cout << "--------------------------------------------------------------" << endl;
+	getline(cin, searchInput);
+	cin.ignore();
+
+	// Search the actual array with provided input.
+	for (int i = 0; i < SIZE; i++) {
+		if (name[i] == searchInput) {
+			cout << "\nContact Found! The information is below" << endl;
+			cout << "--------------------------------------------------------------" << endl;
+			cout << setw(2) << "Name: " << setw(20) << name[i] << " | " << "Number: " << setw(15) << phoneNumber[i] << endl;
+			// Limit the loop to one success.
+			break;
+		}
+		else {
+			// If contact is not found
+			cout << "Contact not found!." << endl;
+		}
+	}
+}
+
+void sort(int sortDir) {
+	// Sort the array after user input based on the phone number
+	if (sortDir = 1) {
+		for (int i = 0; i < SIZE; i++) {
+			for (int j = 0; j < SIZE - 1; j++) {
+				if (phoneNumber[j] > phoneNumber[j + 1]) {
+					// Declare string variable temp to hold the value of the array and swap its values as reference.
+					string temp = phoneNumber[j];
+					phoneNumber[j] = phoneNumber[j + 1];
+					phoneNumber[j + 1] = temp;
+				}
+			}
+		}
+	} else if(sortDir = 0) {
+
+	}
+	else {
+		cout << "Please type 1 for ASCENDING or 0 for DESCENDING order." << endl;
+	}
+}
+
 void printData() {
 	// Print the input data after sorting
 	for (int i = 0; i < SIZE; i++) {
-		cout << setw(2) << i + 1 << "." << "Name: " << setw(20) << name[i] << " | " << "Number: " << setw(15) << phone[i] << endl;
+		cout << setw(2) << i + 1 << "." << "Name: " << setw(20) << name[i] << " | " << "Number: " << setw(15) << phoneNumber[i] << endl;
 	}
 }
+
+
 
 int main()
 {
@@ -67,10 +114,12 @@ int main()
 
 		case 2:
 			//Sort ASCENDING
+			sort(sortOrder);
 			break;
 		case 3:
 			// Sort DESCENDING
-			break
+			sort(sortOrder);
+			break;
 		case 4:
 			// Print data
 			printData();
@@ -78,7 +127,7 @@ int main()
 		case 5:
 			// Search data
 			searchData();
-			break
+			break;
 		case 6: 
 			// Exit program
 			return 0;
