@@ -1,7 +1,7 @@
 /*
 Author: Jay Torres
 Date: March 8, 2020
-Purpose: Simple Contact Manager
+Purpose: Simple Contact Manager - Add contact name and phone number, filter the data ASC by phone number and search the contacts by user input.
 FileName: SimpleContactManager.cpp
 */
 

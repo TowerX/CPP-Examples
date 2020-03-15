@@ -1,6 +1,7 @@
 /*
 Author: Jay Torres
 Date: March 4, 2020
+Update Date: March 15, 2020 (Modularizing Your Simple Cash Register)
 Purpose: Cash Register App - Calculate totals with tax.
 FileName: CashRegister.cpp
 */
