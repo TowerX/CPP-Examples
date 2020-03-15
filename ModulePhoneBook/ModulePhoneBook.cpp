@@ -1,20 +1,86 @@
-// ModulePhoneBook.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*
+Author: Jay Torres
+Date: March 15, 2020
+Purpose: Modularized Phone Book App
+FileName: ModulePhoneBook.cpp
+*/
 
 #include <iostream>
+#include <string>
+#include <cstring>
+#include <cstdlib>
+#include <iomanip>
+
+using namespace std;
+
+string name[3];
+string phoneNumber[3];
+const int SIZE = 3;
+
+void inputData() {
+	// Get input from the user
+	for (int i = 0; i < SIZE; i++) {
+		cout << "\nEnter the " << i + 1 << " person name: ";
+		getline(cin, name[i]);
+
+		cout << "\nEnter the " << i + 1 << " person phone number: ";
+		cin >> phoneNumber[i];
+		cin.ignore();
+	}
+}
+
+void printData() {
+	// Print the input data after sorting
+	for (int i = 0; i < SIZE; i++) {
+		cout << setw(2) << i + 1 << "." << "Name: " << setw(20) << name[i] << " | " << "Number: " << setw(15) << phone[i] << endl;
+	}
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int menuChoice;
+	while (1) {
+		cout << "\n\nPress 1 to Input data:" << endl;
+		cout << "Press 2 to Sort data in ASCENDING order:" << endl;
+		cout << "Press 3 to Sort data in DESCENDING order:" << endl;
+		cout << "Press 4 to Print data:" << endl;
+		cout << "Press 5 to Search data:" << endl;
+		cout << "Press 6 to Exit the program:" << endl;
+
+		cin >> menuChoice;
+		cout << "\n\n" << endl;
+
+		switch (menuChoice) {
+
+		case 1:
+			cin.ignore();
+			inputData();
+			break;
+
+		case 2:
+			//Sort ASCENDING
+			break;
+		case 3:
+			// Sort DESCENDING
+			break
+		case 4:
+			// Print data
+			printData();
+			break;
+		case 5:
+			// Search data
+			searchData();
+			break
+		case 6: 
+			// Exit program
+			return 0;
+			break;
+		default: 
+			cout << "Do nothing" << endl;
+		}
+	}
+
+
+	return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
