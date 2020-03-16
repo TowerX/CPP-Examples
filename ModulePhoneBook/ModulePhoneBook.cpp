@@ -53,7 +53,6 @@ void searchData() {
 			// If contact is not found
 			cout << "Contact not found!." << endl;
 		}
-
 	}
 }
 
@@ -75,6 +74,9 @@ void sortAscending(string arr[], int size) {
 			}
 		}
 	}
+	for (int i = 0; i < SIZE; i++) {
+		cout << setw(2) << i + 1 << "." << "Name: " << setw(20) << name[i] << " | " << "Number: " << setw(15) << phoneNumber[i] << endl;
+	}
 }
 
 void sortDescending(string arr[], int size) {
@@ -87,6 +89,9 @@ void sortDescending(string arr[], int size) {
 				swap(arr[index], arr[index + 1]);
 			}
 		}
+	}
+	for (int i = 0; i < SIZE; i++) {
+		cout << setw(2) << i + 1 << "." << "Name: " << setw(20) << name[i] << " | " << "Number: " << setw(15) << phoneNumber[i] << endl;
 	}
 }
 
@@ -126,6 +131,7 @@ int main()
 			cout << "--------------------------------------------------------------" << endl;
 			cout << "\n\n";
 			sortAscending(phoneNumber, SIZE);
+			//printData();
 			break;
 		case 3:
 			// Sort DESCENDING
