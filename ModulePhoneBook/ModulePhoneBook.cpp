@@ -12,7 +12,7 @@ FileName: ModulePhoneBook.cpp
 #include <iomanip>
 
 using namespace std;
-
+// Constant variable holding the array size for easy access to modifications.
 const int SIZE = 3;
 string name[SIZE] = { "" };
 string phoneNumber[SIZE] = { "" };
@@ -45,56 +45,54 @@ void searchData() {
 			cout << "\nContact Found! The information is below" << endl;
 			cout << "--------------------------------------------------------------" << endl;
 			cout << setw(2) << "Name: " << setw(20) << name[i] << " | " << "Number: " << setw(15) << phoneNumber[i] << endl;
-			cout << "\n\n";
-			// Limit the loop to one success.
-			
+			cout << "\n\n";		
 		}
 		else {
 			// If contact is not found
 			cout << "Contact not found!." << endl;
+			cout << "\n\n";
 		}
 	}
 }
 
 void printData() {
 	// Print the input data after sorting
+	cout << "\nPhone Contacts" << endl;
+	cout << "--------------------------------------------------------------" << endl;
 	for (int i = 0; i < SIZE; i++) {
 		cout << setw(2) << i + 1 << "." << "Name: " << setw(20) << name[i] << " | " << "Number: " << setw(15) << phoneNumber[i] << endl;
 	}
+	cout << "\n\n";
 }
 
-void sortAscending(string arr[], int size) {
+// Ascending sort function using the bubble sort technique
+void sortAscending(string names[], string phones[], int size) {
 	int maxElement;
 	int index;
 
 	for (maxElement = size - 1; maxElement >= 0; maxElement--) {
 		for (index = 0; index <= maxElement - 1; index++) {
-			if (arr[index] > arr[index + 1]) {
-				swap(arr[index], arr[index + 1]);
+			if (phones[index] > phones[index + 1]) {
+				swap(phones[index], phones[index + 1]); \
+					swap(names[index], names[index + 1]);
 			}
 		}
 	}
-	for (int i = 0; i < SIZE; i++) {
-		cout << setw(2) << i + 1 << "." << "Name: " << setw(20) << name[i] << " | " << "Number: " << setw(15) << phoneNumber[i] << endl;
-	}
 }
-
-void sortDescending(string arr[], int size) {
+// Descending sort function using the bubble sort technique
+void sortDescending(string names[], string phones[], int size) {
 	int maxElement;
 	int index;
-
 	for (maxElement = size - 1; maxElement >= 0; maxElement--) {
 		for (index = 0; index <= maxElement - 1; index++) {
-			if (arr[index] < arr[index + 1]) {
-				swap(arr[index], arr[index + 1]);
+			if (phones[index] < phones[index + 1]) {
+				swap(phones[index], phones[index + 1]);\
+					swap(names[index], names[index + 1]);
 			}
 		}
 	}
-	for (int i = 0; i < SIZE; i++) {
-		cout << setw(2) << i + 1 << "." << "Name: " << setw(20) << name[i] << " | " << "Number: " << setw(15) << phoneNumber[i] << endl;
-	}
 }
-
+// Swap function required for the bubble sort
 void swap(string a, string b) {
 	string temp;
 	temp = a;
@@ -105,6 +103,7 @@ void swap(string a, string b) {
 
 int main()
 {
+	// Store the menu choice selected by the user. This will be used as the switch case number.
 	int menuChoice;
 	while (1) {
 		cout << "<><>Phone Book Program<><>" << endl;
@@ -126,20 +125,20 @@ int main()
 			break;
 
 		case 2:
-			//Sort ASCENDING
+			//Sort ASCENDING and Print data
 			cout << "\nData sorted in Ascending order" << endl;
 			cout << "--------------------------------------------------------------" << endl;
 			cout << "\n\n";
-			sortAscending(phoneNumber, SIZE);
-			//printData();
+			sortAscending(name, phoneNumber, SIZE);
+			printData();
 			break;
 		case 3:
-			// Sort DESCENDING
+			// Sort DESCENDING and Print data
 			cout << "\nData sorted in Descending order" << endl;
 			cout << "--------------------------------------------------------------" << endl;
 			cout << "\n\n";
-			sortDescending(phoneNumber, SIZE);
-			//printData();
+			sortDescending(name, phoneNumber, SIZE);
+			printData();
 			break;
 		case 4:
 			// Print data
