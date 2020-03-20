@@ -81,8 +81,8 @@ void sortDescending(string fNames[], string lNames[], string emails[], string ph
 		for (index = 0; index <= maxElement - 1; index++) {
 			if (phones[index] < phones[index + 1]) {
 				swap(phones[index], phones[index + 1]);
-				swap(fNames[index]), fNames[index + 1];
-				swap(lNames[index], lNames[index + 1);
+				swap(fNames[index], fNames[index + 1]);
+				swap(lNames[index], lNames[index + 1]);
 				swap(emails[index], emails[index + 1]);
 			}
 		}
