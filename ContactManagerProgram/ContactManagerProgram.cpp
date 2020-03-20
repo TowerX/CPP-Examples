@@ -73,19 +73,33 @@ void printData() {
 	cout << "\n\n";
 }
 
-// Ascending sort function using the bubble sort technique.
-void sortAscending() {
-
+// Descending sort function using the bubble sort technique.
+void sortDescending(string fNames[], string lNames[], string emails[], string phones[], int size) {
+	int maxElement;
+	int index;
+	for (maxElement = size - 1; maxElement >= 0; maxElement--) {
+		for (index = 0; index <= maxElement - 1; index++) {
+			if (phones[index] < phones[index + 1]) {
+				swap(phones[index], phones[index + 1]);
+				swap(fNames[index]), fNames[index + 1];
+				swap(lNames[index], lNames[index + 1);
+				swap(emails[index], emails[index + 1]);
+			}
+		}
+	}
 }
 
-// Descending sort function using the bubble sort technique.
-void sortDescending() {
+// Ascending sort function using the bubble sort technique.
+void sortAscending(string fNames[], string lNames[], string emails[], string phones[], int size) {
 
 }
 
 // Swap function required for the bubble sort
-void swap() {
-
+void swap(string a, string b) {
+	string temp;
+	temp = a;
+	a = b;
+	b = temp;
 }
 // End Functions
 
