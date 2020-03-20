@@ -131,5 +131,44 @@ int main()
 
 		cin >> menuChoice;
 		cout << "\n\n" << endl;
+
+		switch (menuChoice) {
+		case 1:
+			cin.ignore();
+			inputData();
+			break;
+
+		case 2:
+			//Sort ASCENDING and Print data
+			cout << "\nData sorted in Ascending order" << endl;
+			cout << "--------------------------------------------------------------" << endl;
+			cout << "\n\n";
+			sortAscending(firstName, lastName, phoneNumber, emailAddress, SIZE);
+			printData();
+			break;
+		case 3:
+			// Sort DESCENDING and Print data
+			cout << "\nData sorted in Descending order" << endl;
+			cout << "--------------------------------------------------------------" << endl;
+			cout << "\n\n";
+			sortDescending(firstName, lastName, phoneNumber, emailAddress, SIZE);
+			printData();
+			break;
+		case 4:
+			// Print data
+			printData();
+			break;
+		case 5:
+			// Search data
+			searchData();
+			break;
+		case 6:
+			// Exit program
+			return 0;
+			break;
+		default:
+			cout << "Do nothing" << endl;
+			break;
+		}
 	}
 }
