@@ -29,8 +29,13 @@ void inputData() {
 	cout << "--------------------------------------------------------------" << endl;
 
 	// Fill the array with data
-	for (int i = 0; i < SIZE; i++) {
-
+	for (int index = 0; index < SIZE; index++) {
+		cout << "Enter the contact first name:" << endl;
+		cin >> firstName[index];
+		cout << "Enter " << firstName[index] << ", last name:" << endl;
+		cin >> lastName[index];
+		cout << "Enter " << firstName[index] << ", " << lastName[index] << " email address:" << endl;
+		cin >> emailAddress[index];
 	}
 }
 
