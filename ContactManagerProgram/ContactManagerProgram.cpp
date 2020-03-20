@@ -91,7 +91,18 @@ void sortDescending(string fNames[], string lNames[], string emails[], string ph
 
 // Ascending sort function using the bubble sort technique.
 void sortAscending(string fNames[], string lNames[], string emails[], string phones[], int size) {
-
+	int maxElement;
+	int index;
+	for (maxElement = size - 1; maxElement >= 0; maxElement--) {
+		for (index = 0; index <= maxElement - 1; index++) {
+			if (phones[index] > phones[index + 1]) {
+				swap(phones[index], phones[index + 1]);
+				swap(fNames[index], fNames[index + 1]);
+				swap(lNames[index], lNames[index + 1]);
+				swap(emails[index], emails[index + 1]);
+			}
+		}
+	}
 }
 
 // Swap function required for the bubble sort
@@ -109,4 +120,16 @@ int main()
 	int menuChoice;
 
 	// Main Menu Loop - While return is true => continue otherwise exit the program.
+	while (1) {
+		cout << "<><>Contact Manager Program<><>" << endl;
+		cout << "\n\nPress 1 to Input data:" << endl;
+		cout << "Press 2 to Sort data in ASCENDING order:" << endl;
+		cout << "Press 3 to Sort data in DESCENDING order:" << endl;
+		cout << "Press 4 to Print data:" << endl;
+		cout << "Press 5 to Search data:" << endl;
+		cout << "Press 6 to Exit the program:" << endl;
+
+		cin >> menuChoice;
+		cout << "\n\n" << endl;
+	}
 }
