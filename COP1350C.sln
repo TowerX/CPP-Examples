@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleContactManager", "Sim
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ModulePhoneBook", "ModulePhoneBook\ModulePhoneBook.vcxproj", "{B68E05EB-0BC2-40B0-ADE5-A2FC342F0491}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ContactManagerProgram", "ContactManagerProgram\ContactManagerProgram.vcxproj", "{89D6B914-AEEB-46C9-9545-8EF7E09BA1A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{B68E05EB-0BC2-40B0-ADE5-A2FC342F0491}.Release|x64.Build.0 = Release|x64
 		{B68E05EB-0BC2-40B0-ADE5-A2FC342F0491}.Release|x86.ActiveCfg = Release|Win32
 		{B68E05EB-0BC2-40B0-ADE5-A2FC342F0491}.Release|x86.Build.0 = Release|Win32
+		{89D6B914-AEEB-46C9-9545-8EF7E09BA1A6}.Debug|x64.ActiveCfg = Debug|x64
+		{89D6B914-AEEB-46C9-9545-8EF7E09BA1A6}.Debug|x64.Build.0 = Debug|x64
+		{89D6B914-AEEB-46C9-9545-8EF7E09BA1A6}.Debug|x86.ActiveCfg = Debug|Win32
+		{89D6B914-AEEB-46C9-9545-8EF7E09BA1A6}.Debug|x86.Build.0 = Debug|Win32
+		{89D6B914-AEEB-46C9-9545-8EF7E09BA1A6}.Release|x64.ActiveCfg = Release|x64
+		{89D6B914-AEEB-46C9-9545-8EF7E09BA1A6}.Release|x64.Build.0 = Release|x64
+		{89D6B914-AEEB-46C9-9545-8EF7E09BA1A6}.Release|x86.ActiveCfg = Release|Win32
+		{89D6B914-AEEB-46C9-9545-8EF7E09BA1A6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

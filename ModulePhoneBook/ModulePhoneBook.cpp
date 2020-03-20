@@ -23,7 +23,7 @@ void inputData() {
 	// Get input from the user
 	// Header information
 	cout << "Please enter 3 contact names and phone numbers" << endl;
-	cout << "--------------------------------------------------------------" << endl;
+
 	// Fill the array with data
 	for (int i = 0; i < SIZE; i++) {
 		cout << "Enter the contact name:" << endl;
@@ -32,7 +32,8 @@ void inputData() {
 		cin >> phoneNumber[i];
 	}
 }
-
+// Contact not found message even if the contact is found
+// Issue found by teacher
 void searchData() {
 	// Get user input and store the value on searchInput variable.
 	cout << "Enter a name to search" << endl;
@@ -86,7 +87,7 @@ void sortDescending(string names[], string phones[], int size) {
 	for (maxElement = size - 1; maxElement >= 0; maxElement--) {
 		for (index = 0; index <= maxElement - 1; index++) {
 			if (phones[index] < phones[index + 1]) {
-				swap(phones[index], phones[index + 1]);\
+				swap(phones[index], phones[index + 1]);
 					swap(names[index], names[index + 1]);
 			}
 		}
