@@ -64,7 +64,13 @@ void searchData() {
 
 // Display the data
 void printData() {
-
+	// Print the input data after sorting
+	cout << "\nPhone Contacts" << endl;
+	cout << "--------------------------------------------------------------" << endl;
+	for (int index = 0; index < SIZE; index++) {
+		cout << setw(2) << "FirstName: " << setw(20) << firstName[index] << " | " << "LastName: " << setw(20) << firstName[index] << " | " << "Phone Number: " << setw(15) << phoneNumber[index] << " | " << "FirstName: " << setw(20) << firstName[index] << " | " << "EmailAddress: " << emailAddress[index] << endl;
+	}
+	cout << "\n\n";
 }
 
 // Ascending sort function using the bubble sort technique.
