@@ -41,7 +41,25 @@ void inputData() {
 
 // Perform a search based on user input
 void searchData() {
+	// Get user input and store the value on searchInput variable.
+	cout << "Enter a name to search" << endl;
+	cout << "--------------------------------------------------------------" << endl;
+	cin >> searchInput;
 
+	// Search the actual array with provided input.
+	for (int index = 0; index < SIZE; index++) {
+		if (firstName[index] == searchInput || lastName[index] == searchInput || phoneNumber[index] == searchInput) {
+			cout << "\nContact Found! The information is below" << endl;
+			cout << "--------------------------------------------------------------" << endl;
+			cout << setw(2) << "FirstName: " << setw(20) << firstName[index] << " | " << "LastName: " << setw(20) << firstName[index] << " | " << "Phone Number: " << setw(15) << phoneNumber[index] << " | " << "FirstName: " << setw(20) << firstName[index] << " | " << "EmailAddress: " << emailAddress[index] << endl;
+			cout << "\n\n";
+		}
+		else {
+			// If contact is not found
+			cout << "Contact not found!." << endl;
+			cout << "\n\n";
+		}
+	}
 }
 
 // Display the data
