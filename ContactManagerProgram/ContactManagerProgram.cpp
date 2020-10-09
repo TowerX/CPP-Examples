@@ -141,6 +141,7 @@ int main()
 		cout << "\n\n" << endl;
 
 		switch (menuChoice) {
+
 		case 1:
 			cin.ignore();
 			inputData();
@@ -154,6 +155,7 @@ int main()
 			sortAscending(firstName, lastName, emailAddress, phoneNumber, SIZE);
 			printData();
 			break;
+
 		case 3:
 			// Sort DESCENDING and Print data
 			cout << "\nData sorted in Descending order" << endl;
@@ -162,18 +164,22 @@ int main()
 			sortDescending(firstName, lastName, emailAddress, phoneNumber, SIZE);
 			printData();
 			break;
+
 		case 4:
 			// Print data
 			printData();
 			break;
+
 		case 5:
 			// Search data
 			searchData();
 			break;
+
 		case 6:
 			// Exit program by returning false to the while loop
 			return 0;
 			break;
+
 		default:
 			cout << "Do nothing" << endl;
 			break;
